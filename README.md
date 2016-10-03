@@ -1,4 +1,4 @@
-# Project Title
+# flaskApp
 
 Building a basic web application with Flask/Python.
 
@@ -20,28 +20,14 @@ pip install flask-wtf
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+export FLASK_APP=flaskApp.py
+flask run
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
+Contributions are not being accepted at this time.
 
 ## Authors
 
@@ -53,6 +39,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Based on the book "Flask Web Development" by Miguel Grinberg

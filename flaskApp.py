@@ -1,8 +1,3 @@
-"""
-    Portions of this code may be derived from the book "Flask Web Development" by Miguel Grinberg
-"""
-
-
 import os
 import sqlite3
 from flask import Flask, request, render_template, \

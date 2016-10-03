@@ -33,13 +33,14 @@ app = create_app()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    name = None
     form = NameForm()
+    if 'name' not in session:
+        session['name'] = None
     if form.validate_on_submit():
-        name = form.name.data
+        session['name'] = form.name.data
         form.name.data = ''
-    print(form.validate_on_submit())
-    return render_template('index.html', name=name, current_time=datetime.utcnow(), form=form)
+        return redirect(url_for('index'))
+    return render_template('index.html', name=session['name'], current_time=datetime.utcnow(), form=form)
 
 
 @app.route('/bootstrap/<name>')

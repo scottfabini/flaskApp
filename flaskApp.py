@@ -4,11 +4,19 @@ from flask import Flask, request, render_template, \
     session, g, redirect, url_for, abort, flash, Markup
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.moment import Moment
+from flask.ext.wtf import Form
+from wtforms import StringField, SubmitField
+from wtforms.validators import Required
 from datetime import datetime
 
+class NameForm(Form):
+    name = StringField('What is your name?', validators=[Required()])
+    # validator Required checks that the form is not empty
+    submit = SubmitField('Submit')
 
 def create_app():
     app = Flask(__name__)
+    app.config['SECRET_KEY'] = '2ED35C78BC8F58B54F83A291A1EE4'
     app.config.from_object(__name__)
     app.config.update(dict(
         DATABASE=os.path.join(app.root_path, 'flaskr.db'),
@@ -23,8 +31,15 @@ def create_app():
 app = create_app()
 
 
-@app.route('/')
-def index(): return render_template('index.html', name='stranger', current_time=datetime.utcnow())
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    name = None
+    form = NameForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''
+    print(form.validate_on_submit())
+    return render_template('index.html', name=name, current_time=datetime.utcnow(), form=form)
 
 
 @app.route('/bootstrap/<name>')

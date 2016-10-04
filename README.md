@@ -16,6 +16,7 @@ pip install flask
 pip install flask-script
 pip install flask-bootstrap
 pip install flask-wtf
+pip install flask-sqlalchemy
 ```
 
 ### Installing

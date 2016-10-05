@@ -6,10 +6,11 @@
         <h1>
             Hello
             {% if name %} {{ name }}
-            {% else %}Stranger{% endif %}
-            the current time is: {{ moment(current_time).format('LLL') }}.
+            {% else %}Stranger{% endif %}<br>
             {% if not known %} <p>Pleased to meet you!</p>
             {% else %} <p>Happy to see you again!</p>{% endif %}
+            The current date & time is:<br>
+            {{ moment(current_time).format('LLL') }}.
         </h1>
     <form method="POST">
         {{ form.hidden_tag() }}

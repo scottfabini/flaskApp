@@ -10,22 +10,13 @@ git clone <this repository>
 
 ### Prerequisities
 
-Required python packages installed via pip:
-```
-pip install flask
-pip install flask-script
-pip install flask-bootstrap
-pip install flask-wtf
-pip install flask-sqlalchemy
-pip install flask-script
-pip install flask-migrate
-```
+[Python](https://www.python.org/downloads/)installed on your system.
 
 ### Installing
 
 ```
-export FLASK_APP=flaskApp.py
-flask run
+git clone https://github.com/scottfabini/flaskApp.git
+pip install -r requirements.txt
 ```
 
 ## Contributing

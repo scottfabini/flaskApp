@@ -5,18 +5,27 @@ Building a basic web application with Flask/Python.
 ## Getting Started
 
 ```
-git clone <this repository>
+git clone https://github.com/scottfabini/flaskApp.git
 ```
 
 ### Prerequisities
 
 [Python](https://www.python.org/downloads/)installed on your system.
+VirtualEnv
 
 ### Installing
 
 ```
 git clone https://github.com/scottfabini/flaskApp.git
+cd flaskApp
+virtualenv venv
+source venv/bin/activate
 pip install -r requirements.txt
+python manage.py shell
+>>> db.create_all()
+python manage.py db upgrade
+python manage.py runserver
+Open a web browser and navigate to 127.0.0.1:5000
 ```
 
 ## Contributing

@@ -10,16 +10,16 @@ git clone https://github.com/scottfabini/flaskApp.git
 
 ### Prerequisities
 
-[Python](https://www.python.org/downloads/)installed on your system.
-VirtualEnv
+[Python](https://www.python.org/downloads/) and 
+[VirtualEnv](https://virtualenv.pypa.io/en/stable/) installed on your system.
 
 ### Installing
 
 ```
-git clone https://github.com/scottfabini/flaskApp.git
-cd flaskApp
 virtualenv venv
 source venv/bin/activate
+git clone https://github.com/scottfabini/flaskApp.git
+cd flaskApp
 pip install -r requirements.txt
 python manage.py shell
 >>> db.create_all()

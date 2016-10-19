@@ -1,6 +1,6 @@
 # flaskApp
 
-Building a basic web application with Flask/Python.
+Building a basic web application with Flask/Python. When users enter their names, it is stored in a database.  These names persist across sessions.
 
 ![Image of flaskApp1](https://raw.githubusercontent.com/scottfabini/flaskApp/master/app/static/FlaskApp1.png)
 

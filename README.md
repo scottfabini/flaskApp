@@ -2,6 +2,9 @@
 
 Building a basic web application with Flask/Python.
 
+![Image of flaskApp1](https://raw.githubusercontent.com/scottfabini/flaskApp/master/app/static/FlaskApp1.png)
+
+![Image of flaskApp2](https://raw.githubusercontent.com/scottfabini/flaskApp/master/app/static/FlaskApp2.png)
 
 ## Getting Started
 
